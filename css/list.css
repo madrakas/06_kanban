@@ -1,0 +1,28 @@
+
+.article-list{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    border: 1px solid red;
+}
+
+article {
+    border: 1px solid yellow;
+}
+
+article > header {
+    background-color: #eee;
+    padding: 10px;
+    font-size: 30px;
+    position: sticky;
+    top: 0;
+}
+article > div {
+    padding: 10px;
+    font-size: 20px;
+}
+article > footer {
+    background-color: #eee;
+    padding: 5px;
+    font-size: 16px;
+}

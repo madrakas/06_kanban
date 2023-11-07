@@ -1,0 +1,21 @@
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px #0003;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1;
+
+}
+
+.main-header > logo {
+
+}
+
+.main-header > btn {
+
+}
