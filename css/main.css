@@ -18,13 +18,6 @@ body {
 
 }
 
-.main-content > section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
 .about > div {
     width: 800px;
     font-size: 30px;
