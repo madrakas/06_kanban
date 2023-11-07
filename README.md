@@ -3,7 +3,7 @@
 ![Eco Status](https://img.shields.io/badge/ECO-Friendly-green.svg)
 [![Discord](https://discord.com/api/guilds/571393319201144843/widget.png)](https://discord.gg/dRwW4rw)
 
-# Task manager project
+# Kanban Website
 
 _website design project_
 
@@ -13,9 +13,9 @@ _website design project_
 
 This project is for educational porpuses only. Pull request are welcome, but priority for project authors! Thank you for your cooperation!
 
-Site published at: https://madrakas.github.io/04_kanban/
+Site published at: https://madrakas.github.io/06_kanban/
 
-Design inspirations: [Real Estate](https://dribbble.com/shots/10172325/attachments/2114690?mode=media)
+Design inspiration: [first](https://dribbble.com/shots/17246001/attachments/12352583?mode=media), [Second](https://dribbble.com/shots/14552329--Exploration-Task-Management-Dashboard/attachments/6241009?mode=media)
 
 ## 🎯 Project features/goals
 
@@ -44,7 +44,7 @@ Would like to run this project locally? Open terminal and follow these steps:
 
 1. Clone the repo
     ```sh
-    git clone https://github.com/madrakas/06-kanban.git
+    git clone https://github.com/madrakas/06_kanban.git
     ```
 2. Install NPM packages
     ```sh
