@@ -21,6 +21,7 @@ Design inspiration: [first](https://dribbble.com/shots/17246001/attachments/1235
 
 -   Github pages
 -   Desktop only
+-   Repetitive content generation with JS
 
 ## 🧰 Getting Started
 
