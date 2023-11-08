@@ -14,8 +14,9 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    padding: 40px 20px;
-
+    min-height: calc(100vh - 9rem);
+    background-color: #eee;
+    padding: 3rem 2rem 0 2rem;
 }
 
 .about > div {
@@ -26,6 +27,15 @@ body {
 .main-content > div {
     width: 800px;
     font-size: 30px;
+}
+
+.main-footer{
+    background-color: black;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    line-height: 1em;
+    color: white;
+
 }
 
 @media (max-width: 900px){

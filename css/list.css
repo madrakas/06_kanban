@@ -26,3 +26,8 @@ article > footer {
     padding: 5px;
     font-size: 16px;
 }
+
+.todo .task-list{
+   
+    list-style: none;
+}

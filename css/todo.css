@@ -1,4 +1,94 @@
 .todo {
     display: grid;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    min-height: calc(100vh - 12rem);
+    overflow-y: auto;
+    padding-bottom: 2rem;
+}
+
+.todo .column{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.todo .title {
+ 
+}
+
+.todo .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+}
+
+.todo .task-card {
+    position: relative;
+    display: grid;
+    gap: 0.7rem;
+    padding:  1rem;
+    background-color: #fff;
+    border-radius: 0.4rem;
+    box-shadow: 0 0.1rem 0.4rem #0002;
+}
+
+.task-card .task-actions{
+    /* display: none; */
+    gap: 05rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    background-color: #fffe;
+    box-shadow: 0 0.1rem 0.4rem #0003;
+}
+
+.task-card .task-actions:hover{
+    display: flex;
+}
+
+.task-card .task-actions button{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.2rem;
+}
+
+.task-card .task-actions button.fa-trash{
+    color:red;
+}
+
+.task-card .task-actions button.fa-trash:hover{
+    color:white;
+    background-color: red;
+}
+
+.task-card .task-title {
+    font-size: 1.5rem;
+}
+
+.task-card .task-desc {
+    font-size: 1rem;
+    color: #333;
+
+}
+
+.task-card .task-tags {
+    display: flex;
+    gap: 1rem;
+}
+
+.task-card .tag {
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 1em;
+    padding: 0.5em 1em;
+    background-color: #ccc;
+    border-radius: 1em;
+}
+
+.task-card .task-deadline {
+
 }
