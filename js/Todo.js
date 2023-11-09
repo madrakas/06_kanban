@@ -6,7 +6,7 @@ export class Todo {
         this.columnsDOM = [];
         this.tasks = [];
         this.lastUsedtaskID = 0;
-
+        this.taksCardHTML = '';
         this.init();
     }
 
@@ -16,6 +16,7 @@ export class Todo {
             return console.error(err);
         }
         this.render();
+        this.loadInitialData();
     }
 
     updateDOMElement() {
@@ -46,13 +47,8 @@ export class Todo {
         // console.log(this.columnsDOM);
     }
 
-    addTask(task){
-        this.tasks.push({
-            ...task,
-            isDeleted: false,
-        });
-
-        const taskID = ++this.lastUsedtaskID;
+    taskCardHTML(taskID, task){
+        //gaminam HTML
         let tagsHTML = '';
         let bgcolor = '#cccccc'
 
@@ -75,9 +71,24 @@ export class Todo {
         <div class="task-tags">${tagsHTML}</div>
         <div class="task-deadline">${task.deadline}</div>
         </li>`
-        
-       // this.columnsDOM[task.columnIndex].innerHTML += HTML;
-         this.columnsDOM[task.columnIndex].insertAdjacentHTML('beforeend', HTML);
+
+        return HTML;
+    }
+
+    addTask(task){
+        this.addTaskFromMemory(task)
+        localStorage.setItem('task-list', JSON.stringify(this.tasks));
+    };
+
+    addTaskFromMemory(task){
+        const taskID = ++this.lastUsedtaskID;
+        this.tasks.push({
+            ...task,
+            isDeleted: false,
+        });
+
+        // this.columnsDOM[task.columnIndex].innerHTML += HTML;
+        this.columnsDOM[task.columnIndex].insertAdjacentHTML('beforeend', this.taskCardHTML(taskID, task));
        
         const taskDOM = document.getElementById(`task_${taskID}`);
         const deleteButtonDOM = taskDOM.querySelector('.fa-trash');
@@ -89,6 +100,18 @@ export class Todo {
             console.log(taskID);
         });
     };
+
+    loadInitialData(){
+        const localData = localStorage.getItem('task-list');
+        if (localData){
+            const data = JSON.parse(localData);
+        
+            for (const task of data) {
+                this.addTaskFromMemory(task);
+            }
+        }
+        
+     }
  };
 
  
